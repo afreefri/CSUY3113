@@ -38,12 +38,14 @@ void Entity::CheckCollisionsY(Entity* objects, int objectCount)
                 position.y -= penetrationY;
                 velocity.x = 0;
                 velocity.y = 0;
+                acceleration.x = 0;
                 collidedTop = true;
             }
             else if (velocity.y < 0) {
                 position.y += penetrationY;
                 velocity.x = 0;
                 velocity.y = 0;
+                acceleration.x = 0;
                 collidedBottom = true;
             }
         }
@@ -121,41 +123,6 @@ void Entity::Update(float deltaTime, Entity* platforms, int platformCount)
 
     modelMatrix = glm::mat4(1.0f);
     modelMatrix = glm::translate(modelMatrix, position);
-}
-
-void Entity::DrawText(ShaderProgram* program, GLuint fontTextureID, std::string text,float size, float spacing, glm::vec3 position)
-{
-    float width = 1.0f / 16.0f;
-    float height = 1.0f / 16.0f;
-
-    std::vector<float> vertices;
-    std::vector<float> texCoords;
-
-    for (int i = 0; i < text.size(); i++) {
-
-        int index = (int)text[i];
-        float offset = (size + spacing) * i;
-        float u = (float)(index % 16) / 16.0f;
-        float v = (float)(index / 16) / 16.0f;
-
-        vertices.insert(vertices.end(), {
-            offset + (-0.5f * size), 0.5f * size,
-            offset + (-0.5f * size), -0.5f * size,
-            offset + (0.5f * size), 0.5f * size,
-            offset + (0.5f * size), -0.5f * size,
-            offset + (0.5f * size), 0.5f * size,
-            offset + (-0.5f * size), -0.5f * size,
-            });
-
-        texCoords.insert(texCoords.end(), {
-            u, v,
-            u, v + height,
-            u + width, v,
-            u + width, v + height,
-            u + width, v,
-            u, v + height,
-            });
-    } // end of for loop
 }
 
 void Entity::DrawSpriteFromTextureAtlas(ShaderProgram* program, GLuint textureID, int index)
