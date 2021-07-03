@@ -108,12 +108,17 @@ void Initialize() {
     for (int i = 0; i < WALL_COUNT; i++) {
         state.walls[i].entityType = WALL;
         if (i == 2 || i == 3) {
-            state.walls[i].isActive = false;
             continue;
         }
         state.walls[i].textureID = wallTextureID;
         state.walls[i].position = glm::vec3(startX+i, -3.25f, 0);
     }
+    
+    state.walls[2].textureID = wallTextureID;
+    state.walls[2].position = glm::vec3(startX + 3.5, 0, 0);
+
+    state.walls[3].textureID = wallTextureID;
+    state.walls[3].position = glm::vec3(startX + 4.5, 0, 0);
 
     for (int i = 0; i < WALL_COUNT; i++) {
         state.walls[i].Update(0, NULL, 0);
@@ -170,10 +175,10 @@ void ProcessInput() {
     const Uint8* keys = SDL_GetKeyboardState(NULL);
 
     if (keys[SDL_SCANCODE_LEFT]) {
-        state.spaceship->acceleration.x = -0.5f;
+        state.spaceship->acceleration.x = -1.0f;
     }
     else if (keys[SDL_SCANCODE_RIGHT]) {
-        state.spaceship->acceleration.x = 0.5f;
+        state.spaceship->acceleration.x = 1.0f;
     }
 
     if (glm::length(state.spaceship->movement) > 1.0f) {
@@ -201,14 +206,6 @@ void Update() {
         // Update. Notice it's FIXED_TIMESTEP. Not deltaTime
         state.spaceship->Update(FIXED_TIMESTEP, state.walls, WALL_COUNT);
         state.spaceship->Update(FIXED_TIMESTEP, state.platform, PLATFORM_COUNT);
-
-        for (int i = 0; i < WALL_COUNT; i++) { //check if collision with wall
-            state.spaceship->CheckCollision(&state.walls[i]);
-        }
-
-        for (int i = 0; i < PLATFORM_COUNT; i++) { //check if collision with platform
-            state.spaceship->CheckCollision(&state.platform[i]);
-        }
         deltaTime -= FIXED_TIMESTEP;
     }
 
