@@ -125,7 +125,7 @@ void Initialize() {
     //making the height slightly shorter
     //fixed the width as well 
 
-    state.player->jumpPower = 6.5f;
+    state.player->jumpPower = 6.7f;
 
     state.player->playMusic();
 

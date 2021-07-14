@@ -28,7 +28,7 @@ void Entity::playMusic() {
     Mix_VolumeChunk(winChunk, MIX_MAX_VOLUME / 4);
 
     loseChunk = Mix_LoadWAV("lose.wav");
-    Mix_VolumeChunk(loseChunk, MIX_MAX_VOLUME / 4);
+    //Mix_VolumeChunk(loseChunk, MIX_MAX_VOLUME / 4);
 }
 
 void Entity::deAllocateMusic() {
