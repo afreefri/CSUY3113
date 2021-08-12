@@ -1,0 +1,4 @@
+C:\Users\609fa\OneDrive\Documents\CS3113-master\CS3113-master\Templates\VisualStudioSDLProject\VisualStudioSDLProject\SDLProject\Debug\SDLProject.exe
+C:\Users\609fa\OneDrive\Documents\CS3113-master\CS3113-master\Templates\VisualStudioSDLProject\VisualStudioSDLProject\SDLProject\Debug\SDLProject.pdb
+C:\Users\609fa\OneDrive\Documents\CSUY3113 Notes\SDL3DStarter\VisualStudioSDLProject\SDLProject\Debug\SDLProject.exe
+C:\Users\609fa\OneDrive\Documents\CSUY3113\P6\VisualStudioSDLProject\SDLProject\Debug\SDLProject.exe

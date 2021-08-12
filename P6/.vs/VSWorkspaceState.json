@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\VisualStudioSDLProject",
+    "\\VisualStudioSDLProject\\SDLProject",
+    "\\VisualStudioSDLProject\\SDLProject.xcodeproj",
+    "\\VisualStudioSDLProject\\SDLProject\\shaders"
+  ],
+  "SelectedNode": "\\VisualStudioSDLProject\\SDLProject\\shaders\\fragment_textured.glsl",
+  "PreviewInSolutionExplorer": false
+}

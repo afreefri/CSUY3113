@@ -1,0 +1,2 @@
+C:/Users/609fa/OneDrive/Documents/CSUY3113 Notes/SDL3DStarter/VisualStudioSDLProject/SDLProject/glm/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/609fa/OneDrive/Documents/CSUY3113 Notes/SDL3DStarter/VisualStudioSDLProject/SDLProject/glm/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
