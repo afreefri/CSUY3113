@@ -190,10 +190,10 @@ void ProcessInput() {
     const Uint8* keys = SDL_GetKeyboardState(NULL);
 
     if (keys[SDL_SCANCODE_A]) {
-        currentScene->state.player->rotation.y += 1.0f;
+        currentScene->state.player->rotation.y += 0.75f;
     }
     else if (keys[SDL_SCANCODE_D]) {
-        currentScene->state.player->rotation.y -= 1.0f;
+        currentScene->state.player->rotation.y -= 0.75f;
     }
     else if (keys[SDL_SCANCODE_F]) { //SHOOT
         if (currentScene->state.fireballs->isActive == false) {
@@ -201,7 +201,7 @@ void ProcessInput() {
             Mix_PlayChannel(-1, currentScene->state.shootChunk, 0);
         }
     }
-
+    
     currentScene->state.player->velocity.x = 0;
     currentScene->state.player->velocity.z = 0;
 

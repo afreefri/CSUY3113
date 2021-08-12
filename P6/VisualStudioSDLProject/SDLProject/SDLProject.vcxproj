@@ -158,13 +158,8 @@
     <Image Include="floor.jpg" />
     <Image Include="font.png" />
     <Image Include="grass.jpg" />
-    <Image Include="ctg.png" />
-    <Image Include="crate1_diffuse.png" />
-    <Image Include="mario_body.png" />
-    <Image Include="pikachu.png" />
     <Image Include="portal.png" />
     <Image Include="portal_key.png" />
-    <Image Include="ship.png" />
     <Image Include="witch.png" />
   </ItemGroup>
   <ItemGroup>
@@ -172,7 +167,6 @@
   </ItemGroup>
   <ItemGroup>
     <Media Include="footsteps.wav" />
-    <Media Include="lose.wav" />
     <Media Include="music.mp3" />
     <Media Include="portal.wav" />
     <Media Include="portal_key.wav" />

@@ -1,7 +1,7 @@
 #include "Level1.h"
 
 #define OBJECT_COUNT 234
-#define ENEMY_COUNT 3
+#define ENEMY_COUNT 5
 
 
 void Level1::Initialize() {
@@ -299,6 +299,9 @@ void Level1::Initialize() {
 
         for (int j = 0; j < OBJECT_COUNT; j++) {
             while (state.enemies[i].CheckCollision(&state.objects[j])) {
+                state.enemies[i].position = glm::vec3(rand() % 20 - 10, 0.5f, rand() % 20 - 10);
+            }
+            while (glm::distance(state.enemies[i].position, state.player->position) < 3.5f) {
                 state.enemies[i].position = glm::vec3(rand() % 20 - 10, 0.5f, rand() % 20 - 10);
             }
         }
